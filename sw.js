@@ -1,5 +1,5 @@
-// Офлайн для сайта калькулятора: сначала сеть (всегда свежая версия), без сети — последняя сохранённая. Версия 202610241837.
-const C = 'la-calc-202610241837';
+// Офлайн для сайта калькулятора: сначала сеть (всегда свежая версия), без сети — последняя сохранённая. Версия 202610251301.
+const C = 'la-calc-202610251301';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(C).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
